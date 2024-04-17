@@ -54,18 +54,9 @@ func requests(router *mux.Router) {
 	router.HandleFunc("/auth/google/login", login)
 	router.HandleFunc("/auth/google/callback", oauthGoogleCallback)
 	todoRequests(router)
-	// tokenRequests(router)
-	// userRequests(router)
 }
 
 func routeBase(writer http.ResponseWriter, request *http.Request) {
 	writer.Header().Set("Content-Type", "application/json")
 	io.WriteString(writer, "hihihi")
-}
-
-func setHeaders(w http.ResponseWriter) {
-	w.Header().Set("Content-Type", "application/json")
-	w.Header().Set("Access-Control-Allow-Origin", "http://localhost:4200")
-	w.Header().Set("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE")
-	w.Header().Set("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Methods, Access-Control-Request-Headers")
 }
