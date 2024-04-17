@@ -6,7 +6,7 @@ checking out oauth2
 - Create a Docker MYSQL- Container and start it on port 3306
 - .env.copy -> .env
 - insert your values in .env
-- go run .
+- go run src/main.go
 
 Now the backend is locally reachable on port 3333 :)
 
